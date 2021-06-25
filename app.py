@@ -108,19 +108,19 @@ def newMovie():
 		director = " "
 
 
-	df = pd.read_csv('movie_dataset.csv')
-	movieIndex = df.shape[0]
+	#df = pd.read_csv('movie_dataset.csv')
+	#movieIndex = df.shape[0]
 
 	combinedFeatures = genre + " " + keywords + " " + cast + " " + director
 	print(combinedFeatures)
 	
 	#Storing them in the dataset
-	with open('movie_dataset.csv', 'a') as file:
-		file.write("\n" + str(movieIndex) + ",," + genre + ",,," + keywords + ",,,,,,,,,,,,," + name + ",,," + 
-		cast + ",," + director + "," + combinedFeatures)
+	#with open('movie_dataset.csv', 'a') as file:
+	#	file.write("\n" + str(movieIndex) + ",," + genre + ",,," + keywords + ",,,,,,,,,,,,," + name + ",,," + 
+	#	cast + ",," + director + "," + combinedFeatures)
 
 	#Reloading the dataset and calculating the similarity
-	df = pd.read_csv('movie_dataset.csv')
+	#df = pd.read_csv('movie_dataset.csv')
 	#df['combined_features'] = df.apply(combineFeatures, axis=1)
 
 	cv = CountVectorizer()
